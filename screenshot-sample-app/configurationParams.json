@@ -1,0 +1,35 @@
+{
+    "configurationSettings": [{
+      "category": "General",
+      "fields": [{
+        "type": "conditional",
+        "fieldName": "screenshotEnabled",
+        "label": "Screenshot",
+        "condition": false,
+        "items": [{
+          "type": "options",
+          "fieldName": "screenshotPosition",
+          "tooltip": "Select location for Screenshot",
+          "label": "Select location for Screenshot",
+          "options": [{
+            "label": "Top right",
+            "value": "top-right"
+          }, {
+            "label": "Top left",
+            "value": "top-left"
+          }, {
+            "label": "Bottom right",
+            "value": "bottom-right"
+          }, {
+            "label": "Bottom left",
+            "value": "bottom-left"
+          }]
+        }]
+      }]
+    }],
+    "values": {
+        "screenshotEnabled": false,
+        "screenshotPosition": "top-right"
+    }
+  }
+  

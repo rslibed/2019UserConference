@@ -1,0 +1,33 @@
+{
+  "appid": "",
+  "group": "",
+  "title": "",
+  "webmap": "default",
+  "webscene": "",
+  "portalUrl": "https://www.arcgis.com",
+  "screenshotEnabled": true,
+  "screenshotPosition": "top-right",
+  "homeEnabled": true,
+  "homePosition": "top-left",
+  "enablePopupOption": true,
+  "includePopupInScreenshot": false,
+  "oauthappid": "",
+  "proxyUrl": "",
+  "units": "",
+  "helperServices": {
+    "geometry": {
+      "url": null
+    },
+    "printTask": {
+      "url": null
+    },
+    "elevationSync": {
+      "url": null
+    },
+    "geocode": [
+      {
+        "url": null
+      }
+    ]
+  }
+}
