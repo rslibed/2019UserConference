@@ -481,11 +481,9 @@ class InteractiveLegendApp {
   // _handleShareWidget
   private _handleShareWidget(view: __esri.MapView, shareEnabled: boolean, sharePosition: string): void {
     if (shareEnabled) {
-
       const shareFeatures = new ShareFeatures({
         embedMap: false
-      })
-
+      });
       const share = new Share({
         view,
         shareFeatures
