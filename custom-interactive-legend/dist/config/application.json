@@ -1,0 +1,104 @@
+{
+  "appid": "",
+  "group": "",
+  "homeEnabled": true,
+  "homePosition": "top-left",
+  "shareEnabled": true,
+  "sharePosition": "top-right",
+  "zoomControlsEnabled": true,
+  "zoomControlsPosition": "top-left",
+  "searchEnabled": false,
+  "searchConfig": null,
+  "searchOpenAtStart": false,
+  "searchPosition": "top-right",
+  "basemapToggleEnabled": false,
+  "basemapTogglePosition": "bottom-right",
+  "nextBasemap": "topo",
+  "layerListEnabled": false,
+  "layerListPosition": "bottom-right",
+  "screenshotEnabled": false,
+  "screenshotPosition": "top-left",
+  "enablePopupOption": true,
+  "enableLegendOption": true,
+  "infoPanelEnabled": false,
+  "infoPanelPosition": "top-left",
+  "title": null,
+  "customHeaderEnabled": false,
+  "headHTML": null,
+  "splash": false,
+  "splashOnStart": true,
+  "splashTitle": "Splash start",
+  "splashContent": "Splash content",
+  "splashButtonText": "Okay",
+  "splashButtonPosition": "top-right",
+  "customCSS": null,
+  "interactiveLegendPosition": "bottom-left",
+  "filterMode": "featureFilter",
+  "featureCountEnabled": false,
+  "updateExtentEnabled": false,
+  "muteOpacity": null,
+  "muteGrayScale": null,
+  "webmap": "default",
+  "webscene": "",
+  "portalUrl": "https://arcgis.com",
+  "oauthappid": "",
+  "proxyUrl": "",
+  "units": "",
+  "telemetry": {
+    "prod": {
+      "debug": false,
+      "disabled": false,
+      "amazon": {
+        "userPoolID": "us-east-1:7345bcf2-bffa-4849-a379-a83178f63eef",
+        "app": {
+          "name": "InteractiveLegend",
+          "id": "eadf587070d04c86b747a938cc655e76",
+          "version": "1.0"
+        }
+      }
+    },
+    "devext": {
+      "debug": true,
+      "disabled": false,
+      "amazon": {
+        "userPoolID": "us-east-1:7345bcf2-bffa-4849-a379-a83178f63eef",
+        "app": {
+          "name": "InteractiveLegend",
+          "id": "eadf587070d04c86b747a938cc655e76",
+          "version": "1.0"
+        }
+      }
+    },
+    "qaext": {
+      "debug": true,
+      "disabled": false,
+      "amazon": {
+        "userPoolID": "us-east-1:7345bcf2-bffa-4849-a379-a83178f63eef",
+        "app": {
+          "name": "InteractiveLegend",
+          "id": "74ec952cdae444389057fbae08043476",
+          "version": "1.0"
+        }
+      }
+    }
+  },
+  "customUrlLayer": {
+    "id": null,
+    "fields": []
+  },
+  "customUrlParam": null,
+  "helperServices": {
+    "geometry": {
+      "url": null
+    },
+    "printTask": {
+      "url": null
+    },
+    "elevationSync": {
+      "url": null
+    },
+    "geocode": [{
+      "url": null
+    }]
+  }
+}
