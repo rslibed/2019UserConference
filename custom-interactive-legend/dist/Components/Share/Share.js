@@ -250,8 +250,9 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
             var title = portalItem
                 ? replace_1.replace(i18n.urlTitle, { title: portalItem.title })
                 : null;
+            var snippet = portalItem.snippet ? portalItem.snippet : "";
             var summary = portalItem
-                ? replace_1.replace(i18n.urlSummary, { summary: portalItem.snippet })
+                ? replace_1.replace(i18n.urlSummary, { summary: snippet })
                 : null;
             this._openUrl(this.shareUrl, title, summary, urlTemplate);
         };

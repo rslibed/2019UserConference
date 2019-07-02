@@ -101,6 +101,8 @@ import urlUtils = require("esri/core/urlUtils");
 
 import Share = require("./Components/Share/Share");
 
+import ShareFeatures = require("./Components/Share/Share/ShareFeatures");
+
 import { ApplicationConfig } from "ApplicationBase/interfaces";
 
 // CSS
@@ -380,32 +382,32 @@ class InteractiveLegendApp {
               ];
               const infoContent = screenshotEnabled
                 ? new Collection([
-                    new InfoItem({
-                      type: "list",
-                      title: screenshotTitle,
-                      infoContentItems: screenshotSteps
-                    }),
-                    new InfoItem({
-                      type: "explanation",
-                      title: newInteractiveLegend,
-                      infoContentItems: [
-                        firstOnboardingWelcomeMessage,
-                        secondOnboardingWelcomeMessage,
-                        thirdOnboardingWelcomeMessage
-                      ]
-                    })
-                  ])
+                  new InfoItem({
+                    type: "list",
+                    title: screenshotTitle,
+                    infoContentItems: screenshotSteps
+                  }),
+                  new InfoItem({
+                    type: "explanation",
+                    title: newInteractiveLegend,
+                    infoContentItems: [
+                      firstOnboardingWelcomeMessage,
+                      secondOnboardingWelcomeMessage,
+                      thirdOnboardingWelcomeMessage
+                    ]
+                  })
+                ])
                 : new Collection([
-                    new InfoItem({
-                      type: "explanation",
-                      title: newInteractiveLegend,
-                      infoContentItems: [
-                        firstOnboardingWelcomeMessage,
-                        secondOnboardingWelcomeMessage,
-                        thirdOnboardingWelcomeMessage
-                      ]
-                    })
-                  ]);
+                  new InfoItem({
+                    type: "explanation",
+                    title: newInteractiveLegend,
+                    infoContentItems: [
+                      firstOnboardingWelcomeMessage,
+                      secondOnboardingWelcomeMessage,
+                      thirdOnboardingWelcomeMessage
+                    ]
+                  })
+                ]);
 
               const infoWidget = new Info({
                 view,
@@ -476,15 +478,21 @@ class InteractiveLegendApp {
     }
   }
 
-    // _handleShareWidget
-    private _handleShareWidget(view: __esri.MapView, shareEnabled: boolean, sharePosition: string): void {
-      if (shareEnabled) {
-        const share = new Share({
-          view
-        });
-        view.ui.add(share, sharePosition);
-      }
+  // _handleShareWidget
+  private _handleShareWidget(view: __esri.MapView, shareEnabled: boolean, sharePosition: string): void {
+    if (shareEnabled) {
+
+      const shareFeatures = new ShareFeatures({
+        embedMap: false
+      })
+
+      const share = new Share({
+        view,
+        shareFeatures
+      });
+      view.ui.add(share, sharePosition);
     }
+  }
 
   // _handleHeader
   private _handleHeader(config: ApplicationConfig): void {

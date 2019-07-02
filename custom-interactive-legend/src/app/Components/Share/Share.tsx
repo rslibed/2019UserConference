@@ -364,8 +364,9 @@ class Share extends declared(Widget) {
     const title = portalItem
       ? replace(i18n.urlTitle, { title: portalItem.title })
       : null;
+    const snippet = portalItem.snippet ? portalItem.snippet : "";
     const summary = portalItem
-      ? replace(i18n.urlSummary, { summary: portalItem.snippet })
+      ? replace(i18n.urlSummary, { summary: snippet })
       : null;
     this._openUrl(this.shareUrl, title, summary, urlTemplate);
   }
@@ -391,6 +392,7 @@ class Share extends declared(Widget) {
     summary: string,
     urlTemplate: string
   ): void {
+
     const urlToOpen = replace(urlTemplate, {
       url: encodeURI(url),
       title,
@@ -659,8 +661,8 @@ class Share extends declared(Widget) {
             {copyUrlNode}
           </div>
         ) : (
-          <div class={CSS.icons.esriLoader} />
-        )}
+            <div class={CSS.icons.esriLoader} />
+          )}
       </article>
     );
   }
@@ -702,10 +704,10 @@ class Share extends declared(Widget) {
             readOnly
           />
         ) : (
-          <div class={CSS.shareModal.main.mainUrl.linkGenerating}>
-            {i18n.generateLink}
-          </div>
-        )}
+            <div class={CSS.shareModal.main.mainUrl.linkGenerating}>
+              {i18n.generateLink}
+            </div>
+          )}
       </div>
     );
   }
@@ -754,8 +756,8 @@ class Share extends declared(Widget) {
                 </div>
               </div>
             ) : (
-              <div class={CSS.icons.esriLoader} />
-            )}
+                <div class={CSS.icons.esriLoader} />
+              )}
           </article>
         ) : null}
       </div>

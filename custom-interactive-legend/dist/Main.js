@@ -27,7 +27,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     }
     return t;
 };
-define(["require", "exports", "dojo/i18n!./nls/resources", "dojo/i18n!./Components/Screenshot/Screenshot/nls/resources", "ApplicationBase/support/itemUtils", "ApplicationBase/support/domHelper", "esri/widgets/Home", "esri/widgets/LayerList", "esri/widgets/Search", "esri/layers/FeatureLayer", "esri/widgets/BasemapToggle", "esri/widgets/Expand", "esri/core/watchUtils", "esri/Color", "./Components/Screenshot/Screenshot", "./Components/Info/Info", "telemetry/telemetry.dojo", "./Components/InteractiveLegend/InteractiveLegend", "./Components/Splash/Splash", "./Components/Header/Header", "./Components/Info/Info/InfoItem", "esri/core/Collection", "esri/core/urlUtils", "./Components/Share/Share"], function (require, exports, i18nInteractiveLegend, i18nScreenshot, itemUtils_1, domHelper_1, Home, LayerList, Search, FeatureLayer, BasemapToggle, Expand, watchUtils, Color, Screenshot, Info, Telemetry, InteractiveLegend, Splash, Header, InfoItem, Collection, urlUtils, Share) {
+define(["require", "exports", "dojo/i18n!./nls/resources", "dojo/i18n!./Components/Screenshot/Screenshot/nls/resources", "ApplicationBase/support/itemUtils", "ApplicationBase/support/domHelper", "esri/widgets/Home", "esri/widgets/LayerList", "esri/widgets/Search", "esri/layers/FeatureLayer", "esri/widgets/BasemapToggle", "esri/widgets/Expand", "esri/core/watchUtils", "esri/Color", "./Components/Screenshot/Screenshot", "./Components/Info/Info", "telemetry/telemetry.dojo", "./Components/InteractiveLegend/InteractiveLegend", "./Components/Splash/Splash", "./Components/Header/Header", "./Components/Info/Info/InfoItem", "esri/core/Collection", "esri/core/urlUtils", "./Components/Share/Share", "./Components/Share/Share/ShareFeatures"], function (require, exports, i18nInteractiveLegend, i18nScreenshot, itemUtils_1, domHelper_1, Home, LayerList, Search, FeatureLayer, BasemapToggle, Expand, watchUtils, Color, Screenshot, Info, Telemetry, InteractiveLegend, Splash, Header, InfoItem, Collection, urlUtils, Share, ShareFeatures) {
     "use strict";
     // CSS
     var CSS = {
@@ -285,8 +285,12 @@ define(["require", "exports", "dojo/i18n!./nls/resources", "dojo/i18n!./Componen
         // _handleShareWidget
         InteractiveLegendApp.prototype._handleShareWidget = function (view, shareEnabled, sharePosition) {
             if (shareEnabled) {
+                var shareFeatures = new ShareFeatures({
+                    embedMap: false
+                });
                 var share = new Share({
-                    view: view
+                    view: view,
+                    shareFeatures: shareFeatures
                 });
                 view.ui.add(share, sharePosition);
             }
