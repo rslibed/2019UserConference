@@ -627,8 +627,6 @@
     "muteOpacity": 30,
     "muteGrayScale": 100,
     "featureCountEnabled": false,
-    "updateExtentEnabled": false,
-    "shareEnabled": false,
-    "sharePosition": "top-left"
+    "updateExtentEnabled": false
   }
 }
